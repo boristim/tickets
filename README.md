@@ -1,4 +1,4 @@
-Task conditions:
-As a trial assignment I would like to ask you to write a script that retrieves the cheapest tickets for each available section for the certain event ID from Viagogo website. For example: 
+**Task conditions:**
+_As a trial assignment I would like to ask you to write a script that retrieves the cheapest tickets for each available section for the certain event ID from Viagogo website. For example: 
 For the following event ID 3412160  
-I need to get the cheapest options for sections 101,102,103,106…..Floor, Upper Tier, etc.. I am expecting the script to work in the following way: I put an event ID in a certain row in a config file, then launch the script which downloads me all the necessary data in the txt/csv format. No browser automation tools and libraries are allowed, only pure http requests. 
+I need to get the cheapest options for sections 101,102,103,106…..Floor, Upper Tier, etc.. I am expecting the script to work in the following way: I put an event ID in a certain row in a config file, then launch the script which downloads me all the necessary data in the txt/csv format. No browser automation tools and libraries are allowed, only pure http requests._ 
