@@ -1,0 +1,6 @@
+event_id: 3412160
+result_file: result.csv
+user_agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 YaBrowser/19.9.3.314 Yowser/2.5 Safari/537.36
+url:
+  ajax: https://www.viagogo.com/Browse/VenueMap/GetSvgData/%d?categoryId=%s
+  html: https://www.viagogo.com/E-%d
