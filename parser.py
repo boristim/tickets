@@ -9,12 +9,13 @@ with open("config.yaml", "r") as stream:
         config = yaml.safe_load(stream)
     except yaml.YAMLError as exception:
         print(exception)
+        exit(1)
     finally:
         stream.close()
 
 headers = {'User-Agent': config['user_agent'], 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-User': '1', 'Upgrade-Insecure-Requests': '1'}
-req = rr = requests.get(config['url']['html'] % config['event_id'], headers=headers)
-add_id = re.findall('catid: (\d+)', req.text, re.IGNORECASE)
+req = requests.get(config['url']['html'] % config['event_id'], headers=headers)
+add_id = re.findall("catid: (\d+)", req.text, re.IGNORECASE)
 sections = []
 if len(add_id) > 0:
     headers = {'User-Agent': config['user_agent'], 'X-Requested-With': 'XMLHttpRequest', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-origin'}
@@ -32,5 +33,6 @@ try:
         writer.writeheader()
         for data in sections:
             writer.writerow(data)
-except IOError:
-    print("I/O error")
+except IOError as exception:
+    print(exception)
+    exit(2)
